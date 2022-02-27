@@ -1,0 +1,21 @@
+set $wallpaper /home/mehdi/.wallpapers/ruiner_city.jpg
+
+set $background #030303
+set $foreground #a19fa1
+
+set $color0 #030303
+set $color1 #46090c
+set $color2 #6c0709
+set $color3 #0d424e
+set $color4 #125361
+set $color5 #d12f2e
+set $color6 #1f7995
+set $color7 #a19fa1
+set $color8 #433f43
+set $color9 #46090c
+set $color10 #6c0709
+set $color11 #0d424e
+set $color12 #125361
+set $color13 #d12f2e
+set $color14 #1f7995
+set $color15 #a19fa1
