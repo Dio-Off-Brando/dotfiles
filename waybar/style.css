@@ -1,105 +1,103 @@
-@import "./colors-waybar.css";
+@import "/home/mehdi/.cache/wal/colors-waybar.css";
 
 * {
+    border: none;
+    border-radius: 0;
     font-family: "Hack Nerd Font";
-    font-size: 10px;
+    font-size: 13px;
+    min-height: 0;
 }
 
-
-window#waybar { 
-    background-color: @color4; 
-    color: #ffffff;    
+window#waybar {
+    background: transparent;
+    color: white;
 }
-
-
-.modules-left {
-	background-color: @background;
-	padding: 0px 0px 0px 0px;
-}
-
-
-.modules-right {
-	background-color: @background;
-	padding: 0px 5px 0px 0px;
-}
-
-
-#custom-scratch {
-	background-color: @background;
-	color: #b8b8b8;
-	padding: 0px 9px 0px 9px;
-}
-
-
-#workspaces {
-}
-
-
-#workspaces button {
-	padding: 0px 11px 0px 11px; 
- 	min-width: 1px;
-	color: @foreground;
-}
-
-
-#workspaces button.focused { 
-	padding: 0px 11px 0px 11px; 
-    border-radius: 0px;
-	background-color: @color4;
-	color: @background;
-}
-
-
-#mode { 
-	 background-color: @color4;
-	 color: #ffffff;
-     padding: 0px 5px 0px 5px;
-     border: 1px solid #2f343a;
-}
-
 
 #window {
-	 color: @background;
-	 background-color: @color4;
-     padding: 0px 10px 0px 10px;
+    font-weight: bold;
+    font-family: "Hack Nerd Font";
+}
+/*
+#workspaces {
+    padding: 0 5px;
+}
+*/
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-top: 2px solid transparent;
 }
 
-
-window#waybar.empty #window {
-	background-color: transparent;
-	color: transparent;
+#workspaces button.focused {
+    color: @color9;
+    border-top: 2px solid @color9;
 }
 
-
-window#waybar.empty {
-	background-color: @background;
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
 }
 
-
-#network, #temperature, #backlight, #pulseudio, #battery {
-    padding: 0px 15px 0px 15px;
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+    padding: 0 3px;
+    margin: 0 2px;
 }
-    
 
 #clock {
-	margin: 0px 15px 0px 15px;
+    font-weight: bold;
 }
 
-
-#tray{
-   padding: 0px 8px 0px 5px;
-   margin: 0px 5px 0px 5px;
+#battery {
 }
 
-
-#battery.critical {
-   color: #ff5555;
+#battery icon {
+    color: red;
 }
 
+#battery.charging {
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#network {
+}
 
 #network.disconnected {
-    color: #ff5555;
+    background: #f53c3c;
 }
 
+#pulseaudio {
+}
 
+#pulseaudio.muted {
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#tray {
+}
 

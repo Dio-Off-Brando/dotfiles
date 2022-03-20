@@ -32,7 +32,6 @@ exec --no-startup-id udiskie
 
 
 
-bindsym print exec "grim - |wl-copy"
 
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
@@ -45,7 +44,10 @@ bindsym XF86MonBrightnessDown exec light -U 4
 bindsym XF86AudioRaiseVolume exec pamixer -i 4
 bindsym XF86AudioLowerVolume exec pamixer -d 4
 
-
+bindsym Shift+Print exec "grim -g $(slurp) - | wl-copy"
+bindsym Ctrl+Shift+print exec "grim -g $(slurp)"
+bindsym Ctrl+Print exec "grim"
+bindsym Print exec "grim - | wl-copy"
 
 # window config
 
@@ -58,7 +60,7 @@ gaps inner 6
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/mehdi/.wallpapers/quake.png fit
+output * bg /home/mehdi/.wallpapers/old_computer.png fit
 #
 # Example configuration:
 #
